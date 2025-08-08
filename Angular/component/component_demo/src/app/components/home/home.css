@@ -1,0 +1,12 @@
+h3{
+    text-align: center;
+}
+p{
+    font-style:italic;
+    color: palevioletred;
+    text-align: center;
+}
+div{
+    background-color: yellowgreen;
+    color: black;
+}

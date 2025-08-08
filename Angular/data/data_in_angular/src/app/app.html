@@ -1,0 +1,36 @@
+
+  <h1 class="center-heading">Welcome to data in Angular</h1>
+  <h3> App Name: {{appName}} </h3>
+  <hr/>
+  <ol>
+    <li *ngFor='let item of items'>{{ item }}</li>
+  </ol>
+  <hr/>
+  <div>
+    <h3>Product Details</h3>
+      <h4> Product ID: {{pDetails.pId}}</h4>
+      <h4> Product Name: {{pDetails.pName}}</h4>
+      <h4> Product Price: {{pDetails.pPrice}}</h4>
+      <h4> Product Quantity: {{pDetails.pQty}}</h4>
+      <h4> Product Category: {{pDetails.pCategory}}</h4>
+
+  </div>
+
+  <table border =1>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.pid }}</td>
+      <td>{{ product.pname }}</td>
+      <td>{{ product.price }}</td>
+      <td>{{ product.category }}</td>
+    </tr>
+  </tbody>
+</table>
