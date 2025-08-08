@@ -1,0 +1,16 @@
+<p>products works!</p>
+
+<button (click)="_restdataser.getProductData()">Post it!</button>
+
+<table border="1">
+    <tr *ngFor="let f of _restdataser.post_prod">
+        <td>{{f.id}}</td>
+        <td>{{f.title}}</td>
+        <td>{{f.price}}</td>
+        <td>{{f.description}}</td>         
+        <td>{{f.category}}</td>
+        <td>{{f.rating.rate}}</td>
+         <td>{{f.rating.count}}</td>
+
+    </tr>
+</table>
