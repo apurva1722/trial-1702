@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>PRODUCTS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">PRODUCTS</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-segment [(ngModel)]="selectedCategory">
+  <ion-segment-button value="mens">Mens</ion-segment-button>
+  <ion-segment-button value="women">Women</ion-segment-button>
+  <ion-segment-button value="kids">Kids</ion-segment-button>
+  <ion-segment-button value="electronics">Electronics</ion-segment-button>
+</ion-segment>
+
+<ng-container *ngFor="let product of getProductsByCategory()">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ product.pName }}</ion-card-title>
+      <ion-card-subtitle>{{ product.pBrand }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Price: INR{{ product.pPrice }}</p>
+      <ion-button fill="outline" color="primary">Add to Cart</ion-button>
+      <ion-button shape="round" fill="solid" color="primary" class="heart-button">
+        <ion-icon name="heart" slot="icon-only"></ion-icon>
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
+</ng-container>
+
+</ion-content>
