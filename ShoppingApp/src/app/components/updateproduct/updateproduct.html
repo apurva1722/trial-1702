@@ -1,0 +1,28 @@
+<h2>Update Product</h2>
+
+<label>Enter Product ID:
+  <input type="number" [(ngModel)]="productId">
+</label>
+<button (click)="fetchProduct()">Fetch Product</button>
+
+<div *ngIf="product">
+  <form (ngSubmit)="updateProduct()">
+    <label>Name:
+      <input type="text" [(ngModel)]="product.pName" name="pName" required>
+    </label><br>
+
+    <label>Price:
+      <input type="number" [(ngModel)]="product.pPrice" name="pPrice" required>
+    </label><br>
+
+    <label>Brand:
+      <input type="text" [(ngModel)]="product.pBrand" name="pBrand" required>
+    </label><br>
+
+    <label>In Stock:
+      <input type="checkbox" [(ngModel)]="product.pIsInStock" name="pIsInStock">
+    </label><br>
+
+    <button type="submit">Update Product</button>
+  </form>
+</div>

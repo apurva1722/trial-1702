@@ -1,0 +1,38 @@
+<!-- <nav>
+  <a routerLink="home" >HOME</a>
+  <a routerLink="about">ABOUT</a>
+  <a routerLink="product">PRODUCTS</a>
+  <a routerLink="addproduct">ADD PRODUCT</a>
+  <a routerLink="update">UPDATE PRODUCT</a>
+  <a routerLink="deleteproduct" >DELETE PRODUCT</a>
+</nav>
+<router-outlet></router-outlet> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MEAN Shopping App</title>
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <div class="layout">
+    <nav class="sidebar">
+      <h2 class="logo">🛍️ CartKAR </h2>
+      <ul class="nav-links">
+        <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+        <li><a routerLink="/product" routerLinkActive="active">Products</a></li>
+        <li><a routerLink="/addproduct" routerLinkActive="active">Add Product</a></li>
+        <li><a routerLink="/update" routerLinkActive="active">Update Product</a></li>
+        <li><a routerLink="/deleteproduct" routerLinkActive="active">Delete Product</a></li>
+      </ul>
+    </nav>
+
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</body>
+</html>

@@ -11,9 +11,13 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@angular/core": "^20.2.2",
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "mongodb": "^6.18.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^20.2.1"
   }
 }
